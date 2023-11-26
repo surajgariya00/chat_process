@@ -18,9 +18,7 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {
-              // Implement search action
-            },
+            onPressed: () {},
             icon: Icon(Icons.search),
           ),
         ],
@@ -32,7 +30,6 @@ class HomeScreen extends StatelessWidget {
             _buildCategorySection(),
             _buildFeaturedSection(),
             _buildTrendingSection(),
-            // Add more sections/widgets for products, deals, etc.
           ],
         ),
       ),
@@ -50,6 +47,7 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              color: Colors.black87,
             ),
           ),
           SizedBox(height: 16),
@@ -61,15 +59,16 @@ class HomeScreen extends StatelessWidget {
                 (index) => Container(
                   margin: EdgeInsets.only(right: 16),
                   width: 100,
-                  height: 100,
-                  color: Colors.blue, // Example category item
-                  child: Center(
-                    child: Text(
-                      'Category ${index + 1}',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[300],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'assets/sss.jpg',
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -92,21 +91,21 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              color: Colors.black87,
             ),
           ),
           SizedBox(height: 16),
-          // Replace this with your featured products widget
-          // Example widget:
           Container(
             height: 200,
-            color: Colors.green, // Example featured product placeholder
-            child: Center(
-              child: Text(
-                'Featured Product',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+            decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                'assets/sad.jpg',
+                fit: BoxFit.cover,
               ),
             ),
           ),
@@ -126,21 +125,21 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              color: Colors.black87,
             ),
           ),
           SizedBox(height: 16),
-          // Replace this with your trending products widget
-          // Example widget:
           Container(
             height: 200,
-            color: Colors.orange, // Example trending product placeholder
-            child: Center(
-              child: Text(
-                'Trending Product',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+            decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                'assets/trend.jpg',
+                fit: BoxFit.cover,
               ),
             ),
           ),
